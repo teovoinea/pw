@@ -20,3 +20,7 @@ config :price_watch, PriceWatch.Scheduler,
     # Every minute
     {"* * * * *",      {CrawlQueuer, :update_prices, []}}
   ]
+
+config :price_watch, PriceWatch.Mailer,
+  adapter: Bamboo.PostmarkAdapter,
+  api_key: {:system, "POSTMARK_API_KEY"}

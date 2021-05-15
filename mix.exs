@@ -24,7 +24,10 @@ defmodule PriceWatch.MixProject do
     [
       {:crawly, "~> 0.13.0"},
       {:floki, "~> 0.26.0"},
-      {:quantum, "~> 3.0"}
+      {:quantum, "~> 3.0"},
+      {:bamboo, "~> 2.1.0"},
+      {:bamboo_postmark, "~> 1.0"},
+      {:jason, "~> 1.0"}
     ]
   end
 end
