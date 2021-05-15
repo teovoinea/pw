@@ -23,7 +23,8 @@ defmodule PriceWatch.MixProject do
   defp deps do
     [
       {:crawly, "~> 0.13.0"},
-      {:floki, "~> 0.26.0"}
+      {:floki, "~> 0.26.0"},
+      {:quantum, "~> 3.0"}
     ]
   end
 end

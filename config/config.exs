@@ -14,3 +14,9 @@ config :crawly,
     Crawly.Pipelines.JSONEncoder,
     {Crawly.Pipelines.WriteToFile, extension: "jl", folder: "/tmp"}
   ]
+
+config :price_watch, PriceWatch.Scheduler,
+  jobs: [
+    # Every minute
+    {"* * * * *",      {CrawlQueuer, :update_prices, []}}
+  ]

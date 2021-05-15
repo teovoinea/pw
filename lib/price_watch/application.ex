@@ -10,8 +10,8 @@ defmodule PriceWatch.Application do
     children = [
       # Starts a worker by calling: PriceWatch.Worker.start_link(arg)
       # {PriceWatch.Worker, arg}
+      PriceWatch.Scheduler
     ]
-    Crawly.Engine.start_spider(StaplesSpider)
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
